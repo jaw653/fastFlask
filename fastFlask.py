@@ -63,11 +63,11 @@ def addHTML(appName):
     filename = appName + '/templates/' + appName + '.html'
 
     code = '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>' + appName + \
-        '</title>\n\t</head>\n\t<body>\n\t\t<h1>Hello, world!</h1>\n\t</body>\n</html>'
+        '</title>\n\t</head>\n\t<body>\n\t\t<h1>Thanks for using fastFlask! Time to get to work.</h1>\n\t</body>\n</html>'
 
     subprocess.call(['touch', filename])
     
-    args = 'echo ' + code + ' > ' + filename
+    args = 'echo ' + '\"' + code + '\"' + ' > ' + filename
     subprocess.call(args, shell=True)
 
 
