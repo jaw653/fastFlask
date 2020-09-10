@@ -48,7 +48,7 @@ def home():
     
     subprocess.call(['touch', appName + '/' + appName + '.py'])
     
-    args = 'echo ' + '\"' + code +'\"' + ' > ' + filename
+    args = '/bin/echo ' + '\"' + code +'\"' + ' > ' + filename
     subprocess.call(args)
 
 
@@ -64,7 +64,7 @@ def addHTML(appName):
     code = '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>' + appName + \
         '</title>\n\t</head>\n\t<body>\n\t\tHello, world!\n\t</body>\n</html>'
 
-    args = 'echo ' + code + ' > ' + filename
+    args = '/bin/echo ' + code + ' > ' + filename
     subprocess.call(args)
 
 
