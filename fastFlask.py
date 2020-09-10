@@ -45,8 +45,9 @@ def createApp(appName):
 def home():
     render_template(\'''' + appName + '.html\')'
     code = code + '\n\nif __name__ == \'__main__\':\n\tapp.run(host=\'0.0.0.0\', debug=True, threaded=True)\n'
-            
-    subprocess.call(['echo', code, '>', filename])
+    
+    args = 'echo ' + code + ' > ' + filename
+    subprocess.call(args)
 
 
 def addHTML(appName):
@@ -61,8 +62,8 @@ def addHTML(appName):
     code = '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>' + appName + \
         '</title>\n\t</head>\n\t<body>\n\t\tHello, world!\n\t</body>\n</html>'
 
-    args = 'echo ' + code + ' > ', filename
-    subprocess.call([args])
+    args = 'echo ' + code + ' > ' + filename
+    subprocess.call(args)
 
 
 def runApp(appName):
