@@ -48,7 +48,7 @@ def home():
     
     subprocess.call(['touch', appName + '/' + appName + '.py'])
     
-    args = ['echo ', code, ' > ', filename]
+    args = 'echo ' + '\"' + code +'\"' + ' > ' + filename
     subprocess.call(args)
 
 
