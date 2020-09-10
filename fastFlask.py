@@ -24,7 +24,7 @@ def createDir(dirName):
     dirName - name of the directory to be created
     '''
     subprocess.call(['mkdir', dirName])
-    subprocess.call(['touch', dirname + '.py'])
+    subprocess.call(['touch', dirName + '.py'])
     subprocess.call(['mkdir', dirName + '/static'])
     subprocess.call(['mkdir', dirName + '/templates'])
     subprocess.call(['mkdir', dirName + '/templates/js'])
