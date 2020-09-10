@@ -11,6 +11,7 @@ Additions:
 - Parse command line args for options
 - Option for enabling CORS
 - add ability to specify where the flask app is setup
+- Do a system check to see if flask, pip installed. If not, install them after asking user for permission
 '''
 
 import sys
