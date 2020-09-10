@@ -37,7 +37,6 @@ def createApp(appName):
     appName - Name of the app
     '''
     filename = appName + '/' + appName + '.py'
-    print('file to save to is: ', file)
 
     code = 'from flask import Flask, render_template\n\napp = Flask(\'' + \
         appName + '\')\n\n' 
