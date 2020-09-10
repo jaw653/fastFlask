@@ -44,7 +44,7 @@ def createApp(appName):
     code = code + '''
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    render_template(\'''' + appName + '.html\')'
+    return render_template(\'''' + appName + '.html\')'
     code = code + '\n\nif __name__ == \'__main__\':\n    app.run(host=\'0.0.0.0\', debug=True, threaded=True)\n'
     
     subprocess.call(['touch', appName + '/' + appName + '.py'])
