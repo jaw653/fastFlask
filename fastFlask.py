@@ -72,7 +72,7 @@ def runApp(appName):
     '''
     Starts the new Flask web app on port 5000 in debug mode
     '''
-    subprocess.call(['python3', appName])
+    subprocess.call(['python3', appName + '.py'])
 
 
 
