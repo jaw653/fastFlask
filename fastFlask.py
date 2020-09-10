@@ -24,7 +24,6 @@ def createDir(dirName):
     dirName - name of the directory to be created
     '''
     subprocess.call(['mkdir', dirName])
-    subprocess.call(['touch', dirName + '/' + dirName + '.py'])
     subprocess.call(['mkdir', dirName + '/static'])
     subprocess.call(['mkdir', dirName + '/templates'])
     subprocess.call(['mkdir', dirName + '/templates/js'])
@@ -46,6 +45,8 @@ def createApp(appName):
 def home():
     render_template(\'''' + appName + '.html\')'
     code = code + '\n\nif __name__ == \'__main__\':\n\tapp.run(host=\'0.0.0.0\', debug=True, threaded=True)\n'
+    
+    subprocess.call(['touch', dirName + '/' + dirName + '.py'])
     
     args = 'echo ' + code + ' > ' + filename
     subprocess.call(args)
