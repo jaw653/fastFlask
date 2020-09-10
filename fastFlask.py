@@ -63,7 +63,7 @@ def addHTML(appName):
     filename = appName + '/templates/' + appName + '.html'
 
     code = '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>' + appName + \
-        '</title>\n\t</head>\n\t<body>\n\t\tHello, world!\n\t</body>\n</html>'
+        '</title>\n\t</head>\n\t<body>\n\t\t<h1>Hello, world!</h1>\n\t</body>\n</html>'
 
     subprocess.call(['touch', appName + '/templates/' + appName + '.html'])
     
