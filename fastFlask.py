@@ -61,7 +61,8 @@ def addHTML(appName):
     code = '<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>' + appName + \
         '</title>\n\t</head>\n\t<body>\n\t\tHello, world!\n\t</body>\n</html>'
 
-    subprocess.call(['echo', code, '>', filename])
+    args = 'echo ' + code + ' > ', filename
+    subprocess.call([args])
 
 
 def runApp(appName):
