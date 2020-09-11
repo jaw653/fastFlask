@@ -77,6 +77,7 @@ def runApp(appName):
     '''
     print('*** APP RUNNING ON localhost:5000 ***')
     subprocess.call(['python3', appName + '/' + appName + '.py'])
+    print('test')
     subprocess.call(['firefox', '--new-window https://localhost:5000'])     # FIXME: check to see if firefox is present
 
 
