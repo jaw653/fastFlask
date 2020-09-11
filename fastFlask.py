@@ -76,7 +76,7 @@ def runApp(appName):
     Starts the new Flask web app on port 5000 in debug mode
     '''
     print('*** APP RUNNING ON localhost:5000 ***')
-    subprocess.call(['python3', appName + '/' + appName + '.py'])
+    subprocess.call(['python3', appName + '/' + appName + '.py', '&'])
     print('test')
     subprocess.call(['firefox', '--new-window https://localhost:5000'])     # FIXME: check to see if firefox is present
 
